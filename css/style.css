@@ -1,38 +1,106 @@
-/*
-Theme Name: KenzieFlix
-Author: Kenzie Academy
-Author URI: kenzie.com.br;
-Version: 1.0
- 
---------------------------------------------
-SUGESTÃO DE ESTRUTURAÇÃO BASE 
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** BODY
-**** TOPO
-**** RODAPÉ
-**** PÁGINA INICIAL
-*/
-
-/* VARIÁVEIS */
-:root{
-  
+*{
+	margin: 0;
+	padding: 0;
 }
 
-/*BODY*/
-	body{
+:root{
+	--bodycolor:#00002e;
+	--sizedad:858px;
+	--sizeson:186px;
+	--font:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
 
-	}
+body{
+	background-color:var(--bodycolor);
+	font-family: var(--font);
+	color:white;
+}
 
-/*TOPO*/
-	header.topo{
-		
-	}
+header.topo{
+	display: flex;
+    justify-content: flex-start;
+}
 
-/*RODAPÉ*/
+header.topo img{
+	width: 150px;
+}
+
+figcaption{
+	display: none;
+}	
+
+header{
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+}
+
+div.pg-home{
+	display: flex;
+	justify-content: center;
 	
+}
 
-/*PÁGINA INICIAL*/
-	div.pg-home{
-		
-	}
+ul{
+	margin-top: 50px;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	width: var(--sizedad);
+	box-sizing: border-box;
+	justify-content: space-around;
+}
+
+li{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+	flex-basis: var(--sizeson);
+}
+
+.addPerfil figure{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-basis: 100%;
+}
+.addPerfil img{
+width:50%;
+}
+
+img{
+	width: 100%;
+}
+
+button{
+	display: flex;
+	margin: auto;
+	background-color: var(--bodycolor);
+	padding: 10px;
+	border:solid white;
+	color: white;
+	margin-top: 30px;
+}
+
+@media(max-width:768px){
+
+header.topo{
+	display: flex;
+	justify-content: center;
+}
+
+header{
+	font-size: 15px;
+}
+
+
+ul{
+	width: 500px;
+}
+
+li{
+	margin-bottom: 20px;
+}
+
+}
